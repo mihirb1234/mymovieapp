@@ -6,7 +6,7 @@ import movieAPI from '../../apis/MovieAPI';
 // Use the API key in the request                                                //term is input from the search bar
 export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', async (term) => {
     // const movieText = "harry";
-    const apiKey = import.meta.env.VITE_REACT_APP_API_KEY;
+    const apiKey = 49290fa6;
 
       const response = await movieAPI.get(`?apiKey=${apiKey}&s=${term}&type=movie`);
       console.log("the response from API", response.data);
@@ -17,7 +17,7 @@ export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', asyn
 
 export const fetchAsyncShows = createAsyncThunk('movies/fetchAsyncShows', async (term) => {
     // const seriesText = "Friends";
-    const apiKey = import.meta.env.VITE_REACT_APP_API_KEY;
+    const apiKey = 49290fa6;
 
       const response = await movieAPI.get(`?apiKey=${apiKey}&s=${term}&type=series`);
       console.log("the response from API", response.data);
