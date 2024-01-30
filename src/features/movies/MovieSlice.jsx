@@ -27,7 +27,7 @@ export const fetchAsyncShows = createAsyncThunk('movies/fetchAsyncShows', async 
 
 export const fetchAsyncMovieOrShowDetail = createAsyncThunk('movies/fetchAsyncMovieOrShowDetail', 
   async (id) => {
-  const apiKey = import.meta.env.VITE_REACT_APP_API_KEY;
+  const apiKey = 49290fa6;
 
     const response = await movieAPI.get(`?apiKey=${apiKey}&i=${id}&Plot=full`);
     console.log("the response from API", response.data);
